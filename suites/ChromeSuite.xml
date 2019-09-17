@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+    <!-- change the value based on requeire -->
+    <!-- "Mozilla" or "Chrome" -->
+    <parameter name="platformName" value="{platform}" />
+    <parameter name="baseUrl" value="https://{base-url}" />
+    <parameter name="headless" value="{true or false}" />
+
+    <!-- example parameter  -->
+    <!-- Authentication -->
+    <parameter name="adidPC" value="nhgadmin" />
+    <parameter name="password" value="password.123" />
+    <parameter name="accountName" value="NHG, Administrator (Anaesthesiology)" />
+
+    <!-- ********************************* -->
+
+    <!-- example of test suite  -->
+    <test name="Authentication">
+        <classes>
+            <class name="com.media2359.tests.a_Authentication">
+                <methods>
+                    <exclude name="A_001_validLogin" />
+                    <exclude name="A_002_ForgotPassword" />
+                    <exclude name="A_003_ViewDisclaimer" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Test Authentication -->
+</suite> <!-- Suite -->
